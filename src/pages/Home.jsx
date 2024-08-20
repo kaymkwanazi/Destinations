@@ -2,6 +2,7 @@ import React from 'react'
 import greece from '../images/greece.jpg'
 import spain from '../images/spain.jpg'
 import { PopularDestination } from '../components/PopularDestination'
+import { Services } from '../components/Services';
 
 export const Home = () => {
   return (
@@ -18,6 +19,7 @@ export const Home = () => {
         </div>
     </div>
     <PopularDestination />
+    <Services />
     </>
   )
 }
