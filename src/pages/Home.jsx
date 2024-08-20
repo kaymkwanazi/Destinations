@@ -1,9 +1,12 @@
 import React from 'react'
 import greece from '../images/greece.jpg'
 import spain from '../images/spain.jpg'
+import { PopularDestination } from '../components/PopularDestination'
 
 export const Home = () => {
   return (
+    <>
+    
     <div className='relative h-screen bg-cover bg-center'
         style={{backgroundImage: `url(${spain})`}}>
 
@@ -14,5 +17,7 @@ export const Home = () => {
                 Get started</button>
         </div>
     </div>
+    <PopularDestination />
+    </>
   )
 }
