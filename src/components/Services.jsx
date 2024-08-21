@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import greece2 from '../images/greece.jpg'
 import { FaUmbrellaBeach, FaPlane, FaHotel} from "react-icons/fa";
 import { MdOutlineTour } from "react-icons/md";
 

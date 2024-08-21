@@ -3,7 +3,7 @@ import axios from 'axios';
 import greece from '../images/greece.jpg'
 
 export const PopularDestination = () => {
-    const [destinations, setDestinations] = useState ();
+    const [destinations, setDestinations] = useState ([]);
     console.log(destinations);
 
     useEffect(() => {
@@ -19,7 +19,7 @@ export const PopularDestination = () => {
         <div className='container mx-auto px-4'>
             <h3 className='text-center text-4xl font-bold mb-8'>Popular Destinations</h3>
             <div className='grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
-                {Array.isArray(destinations) ? destinations.slice(0,4).map((element) => (
+                {destinations.slice(0,4).map((element) => (
                     <div key={element.id} className='bg-white rounded-lg shadow-md overflow-hidden cursor-pointer'>
                         <img src={element.image} alt={element.name} className='w-full h-48 object-cover 
                            transform transition duration-300 hover:scale-110'></img>
@@ -29,7 +29,7 @@ export const PopularDestination = () => {
                         </div> 
 
                     </div>
-                )): []}
+                ))}
             </div>
         </div>
     </div>

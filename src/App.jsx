@@ -5,6 +5,7 @@ import { Home } from './pages/Home'
 import { Navbar } from './components/Navbar'
 import { Services } from './components/Services'
 import { Footer } from './components/Footer'
+import { Gallery } from './pages/Gallery'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,7 +16,7 @@ function App() {
     <Navbar />
     <Routes>
       <Route path='/' element = {<Home />}></Route>
-      {/* <Route path='/services' element = {<Services />}></Route> */}
+      <Route path='/gallery' element = {<Gallery />}></Route>
     </Routes>
     <Footer />
     </BrowserRouter>
