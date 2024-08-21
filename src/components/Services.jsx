@@ -43,7 +43,7 @@ export const Services = () => {
     }, []);
 
   return (
-    <div className='py-12 bg-gray-200' /*style={{backgroundImage: `url(${greece2})`}}*/>
+    <div className='py-12 bg-gray-200'>
         <div className='container mx-auto px-4'>
             <h2 className='text-center text-4xl font-bold mb-8'>Our Services</h2>
             <div className='grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
