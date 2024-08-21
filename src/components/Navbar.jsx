@@ -12,7 +12,7 @@ export const Navbar = () => {
             <div className='hidden md:flex space-x-4 text-sm font-bold items-center' >
                 <Link to='/' className='px-6 py-2 hover:bg-gray-600 hover:text-white'>Home</Link>
                 <Link to='/about' className='px-6 py-2 hover:bg-gray-600 hover:text-white'>About</Link>
-                <Link to='/services' className='px-6 py-2 hover:bg-gray-600 hover:text-white'>Our services</Link>
+                <Link to='/gallery' className='px-6 py-2 hover:bg-gray-600 hover:text-white'>Gallery</Link>
                 <Link to='/contact' className='px-6 py-2 hover:bg-gray-600 hover:text-white'>Contact</Link>
                 <button className='py-2 px-6 border bg-gray-300'>Login</button>
             </div>

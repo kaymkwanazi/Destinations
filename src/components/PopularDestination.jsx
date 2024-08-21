@@ -15,9 +15,9 @@ export const PopularDestination = () => {
     
     
   return (
-    <div className='py-10 bg-gray-100'>
+    <div className='py-10 bg-gray-200'>
         <div className='container mx-auto px-4'>
-            <h3 className='text-center text-2xl font-bold mb-8'>Popular Destinations</h3>
+            <h3 className='text-center text-4xl font-bold mb-8'>Popular Destinations</h3>
             <div className='grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
                 {Array.isArray(destinations) ? destinations.slice(0,4).map((element) => (
                     <div key={element.id} className='bg-white rounded-lg shadow-md overflow-hidden cursor-pointer'>
