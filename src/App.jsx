@@ -6,6 +6,8 @@ import { Navbar } from './components/Navbar'
 import { Services } from './components/Services'
 import { Footer } from './components/Footer'
 import { Gallery } from './pages/Gallery'
+import { Contact } from './pages/Contact'
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,7 +18,9 @@ function App() {
     <Navbar />
     <Routes>
       <Route path='/' element = {<Home />}></Route>
-      <Route path='/gallery' element = {<Gallery />}></Route>
+      <Route path='/gallery' element = {<Gallery />}></Route>      
+      <Route path='/contact' element= {<Contact />}></Route>     
+
     </Routes>
     <Footer />
     </BrowserRouter>

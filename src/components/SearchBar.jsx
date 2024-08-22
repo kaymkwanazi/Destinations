@@ -15,7 +15,6 @@ export const SearchBar = () => {
     console.log("search: ", searchQuery);
 
     const results = data.filter(item => item.name === searchQuery)
-    console.log("🚀 ~ SearchBar ~ results:", results)
     
   return (
     <div className='flex items-center'>

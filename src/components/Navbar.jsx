@@ -8,7 +8,9 @@ export const Navbar = () => {
   return (
     <nav className='fixed m-4 top-0 right-0 left-0 shadow-lg z-50 bg-white'>
         <div className='container px-4 flex justify-between items-center h-16'>
-            <h3 className='text-2xl font-bold flex text-purple-700 cursor-pointer'><MdOutlineTravelExplore />KayTravels</h3>
+            <Link to='/'>
+                <h3 className='text-2xl font-bold flex text-purple-700 cursor-pointer'><MdOutlineTravelExplore />KayTravels</h3>
+            </Link>
             <div className='hidden md:flex space-x-4 text-sm font-bold items-center' >
                 <Link to='/' className='px-6 py-2 hover:bg-gray-600 hover:text-white'>Home</Link>
                 <Link to='/about' className='px-6 py-2 hover:bg-gray-600 hover:text-white'>About</Link>
