@@ -13,12 +13,17 @@ export const SearchBar = () => {
     };
 
     const filteredResults = data.filter(item => item.name.toLowerCase() === searchQuery.toLowerCase());
-    console.log("🚀 ~ SearchBar ~ filteredResults:", filteredResults)
+    const byCountries = data.filter(item => item.country.toLowerCase() === searchQuery.toLowerCase());
+    
+    const combinedResults = [... new Set([...filteredResults, ...byCountries])];
+
+    console.log("🚀 ~ SearchBar ~ filteredResults:", combinedResults)
 
     return (
       <>
-      {filteredResults && filteredResults.length > 0 && (
-        <DialogForm data={filteredResults} />
+      {combinedResults && combinedResults.length > 0 && (
+        <DialogForm data={combinedResults} />
+
       )}
         <div className='flex items-center'>
             <input

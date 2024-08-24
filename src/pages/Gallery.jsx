@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import greece2 from '../images/greece.jpg'
 import axios from 'axios'
+import { Filtering } from '../components/Filtering';
 
 export const Gallery = () => {
     const [cities, setCities] = useState ([]);
@@ -34,6 +35,7 @@ export const Gallery = () => {
         </div>
 
         <div className='container mx-auto px-4'>
+            <Filtering />
             <div className='grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-10 mb-10'>
             {currentItems.map((item) => (
                     <div key={item.id} className='bg-white rounded-lg shadow-md overflow-hidden cursor-pointer'>
