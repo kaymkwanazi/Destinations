@@ -23,7 +23,7 @@ export const Filtering = () => {
 
     return (
       <>
-      {showResults && byCountries.map((result) => (
+      {byCountries.map((result) => (
         <div key={result.id} className="my-4">
           {/* Render relevant information (e.g., name, country, image) */}
          <h4>{result.name}</h4>
@@ -35,7 +35,7 @@ export const Filtering = () => {
 
       <div className='grid sm:grid-cols-1 lg:grid-cols-2'>
         <div className='flex items inline'>
-            <h3 className='pt-5 mr-5'>Filter</h3>
+            <h3 className='pt-5 mr-10'>Filter</h3>
             <input
                 type='text'
                 placeholder='Search country'
@@ -49,18 +49,18 @@ export const Filtering = () => {
             >
              Search
             </button>
+
+             <div>
+                 <input type='rating' placeholder='Rating' 
+                    className='pl-2 px-2 mt-5 ml-5 border border-gray-300 rounded-l-full focus:outline-none '
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}></input>
+                    <button className='border border-gray-300 rounded-r-full font-semibold px-2 mt-5'
+                        onClick={handleShowResults}>Search</button>
+             </div>
+
         </div>
-        <div>
-          <input type='rating' placeholder='Rating' 
-             className='pl-2 px-2 mt-5 border border-gray-300 rounded-l-full focus:outline-none '
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}></input>
-            <button className='border border-gray-300 rounded-r-full font-semibold px-2 mt-5'
-                onClick={handleShowResults}
-            >
-             Search
-            </button>
-        </div>
+     
       </div>
        
         </>
