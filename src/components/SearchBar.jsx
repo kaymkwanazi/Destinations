@@ -21,7 +21,7 @@ export const SearchBar = () => {
 
     return (
       <>
-      {combinedResults && combinedResults.length > 0 && (
+      {combinedResults && combinedResults.length (
         <DialogForm data={combinedResults} />
 
       )}
