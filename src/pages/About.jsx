@@ -1,6 +1,6 @@
 import React from 'react'
 import greece from '../images/greece.jpg'
-import italy from '../images/italy.jpg'
+import italy from '../images/Italy.jpg'
 
 export const About = () => {
   return (
