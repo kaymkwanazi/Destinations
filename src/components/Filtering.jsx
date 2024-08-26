@@ -20,19 +20,16 @@ export const Filtering = () => {
       
 
     const byCountries = data.filter(item => item.country.toLowerCase() === searchQuery.toLowerCase());
+    const rating = data.filter(item => item.country.toLowerCase() === searchQuery.toLowerCase());
 
     return (
       <>
       {byCountries.map((result) => (
-        <div key={result.id} className="my-4">
-          {/* Render relevant information (e.g., name, country, image) */}
-         <h4>{result.name}</h4>
-         <p>{result.country}</p>
-            {/* Add an image component if you have image URLs */}
+          <div key={result.id} className="my-4">
+            <h4>{result.name}, {result.country}</h4>
             <img src={result.imageUrl} alt={result.name} />
-        </div>
-        ))}
-
+          </div>
+          ))}
       <div className='grid sm:grid-cols-1 lg:grid-cols-2'>
         <div className='flex items inline'>
             <h3 className='pt-5 mr-10'>Filter</h3>
@@ -50,14 +47,14 @@ export const Filtering = () => {
              Search
             </button>
 
-             <div>
+             {/* <div>
                  <input type='rating' placeholder='Rating' 
                     className='pl-2 px-2 mt-5 ml-5 border border-gray-300 rounded-l-full focus:outline-none '
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}></input>
                     <button className='border border-gray-300 rounded-r-full font-semibold px-2 mt-5'
                         onClick={handleShowResults}>Search</button>
-             </div>
+             </div> */}
 
         </div>
      

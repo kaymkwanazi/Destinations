@@ -12,19 +12,18 @@ export const SearchBar = () => {
             .catch(error => console.log('Error fetching data:', error));
     };
 
-    const filteredResults = data.filter(item => item.name.toLowerCase() === searchQuery.toLowerCase());
-    const byCountries = data.filter(item => item.country.toLowerCase() === searchQuery.toLowerCase());
+    const filteredResults = data.filter(item => 
+        item.name.toLowerCase() === searchQuery.toLowerCase() ||
+        item.country.toLowerCase() === searchQuery.toLowerCase()
+    );
     
-    const combinedResults = [... new Set([...filteredResults, ...byCountries])];
-
-    console.log("🚀 ~ SearchBar ~ filteredResults:", combinedResults)
+    const Count = filteredResults && filteredResults.length;
 
     return (
       <>
-      {combinedResults && combinedResults.length (
-        <DialogForm data={combinedResults} />
-
-      )}
+       {Count === 1 && (
+            <DialogForm data={filteredResults} />
+        )}
         <div className='flex items-center'>
             <input
                 type='text'
@@ -34,7 +33,7 @@ export const SearchBar = () => {
                 onChange={(e) => setSearchQuery(e.target.value)}
             />
             <button
-                className='border rounded-r-full font-semibold px-5 py-2 bg-cyan-600 hover:bg-cyan-700'
+                className='border-cyan-600 rounded-r-full font-semibold px-5 py-2 bg-cyan-600 hover:bg-cyan-700'
                 onClick={handleSearch}
             >
                 Search
